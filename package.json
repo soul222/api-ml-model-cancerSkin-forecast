@@ -1,0 +1,23 @@
+{
+  "name": "api-ml",
+  "version": "1.0.0",
+  "description": "api-ml dengan hapiJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon ./src/server/server.js",
+    "start": "node ./src/server/server.js"
+  },
+  "author": "soultan",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^21.3.12",
+    "@tensorflow/tfjs-node": "^4.14.0",
+    "dotenv": "^16.4.5",
+    "firebase-admin": "^13.0.1",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

@@ -1,10 +1,20 @@
-FROM node:18-alpine
+# Gunakan Node.js base image
+FROM node:16
 
-WORKDIR /app
+# Buat direktori kerja
+WORKDIR /usr/src/app
 
-COPY package* .
-RUN npm i
+# Salin file package.json dan package-lock.json
+COPY package*.json ./
 
+# Install dependencies
+RUN npm install
+
+# Salin semua file ke direktori kerja
 COPY . .
 
-CMD [ "npm", "run", "dev" ]
+# Expose port
+EXPOSE 8080
+
+# Jalankan aplikasi
+CMD ["npm", "start"]
